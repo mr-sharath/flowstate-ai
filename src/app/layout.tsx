@@ -12,8 +12,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="dark">
-      <body className="font-sans bg-gray-900 text-white min-h-screen">{children}</body>
+    <html lang="en">
+      <body className="font-sans bg-white text-dark-grey min-h-screen">{children}</body>
     </html>
   )
 }

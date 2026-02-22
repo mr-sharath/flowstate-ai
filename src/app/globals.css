@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Additional dark mode styles */
+/* Light theme styles */
 html, body {
-  background-color: #111827;
-  color: #ffffff;
+  background-color: #FFFFFF;
+  color: #333333;
 }

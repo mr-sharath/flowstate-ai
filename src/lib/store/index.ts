@@ -4,6 +4,10 @@ import { milestones, type Milestone } from '../data/milestones'
 import { invoices, type Invoice } from '../data/invoices'
 import { projects, type Project } from '../data/projects'
 import { processTranscript } from '../utils/llmClient'
+import { mockTranscripts, type MockTranscript } from '../data/mockTranscripts'
+import { mockFiles, type GeneratedFile } from '../data/mockFiles'
+import { testimonials, type Testimonial } from '../data/testimonials'
+import { features, type FeatureHighlight } from '../data/features'
 
 interface AppState {
   meetings: Meeting[]
@@ -16,6 +20,10 @@ interface AppState {
   processTranscriptAsync: (transcript: string) => Promise<void>
   generateReport: () => void
   generateInvoice: () => void
+  mockTranscripts: MockTranscript[]
+  mockFiles: GeneratedFile[]
+  testimonials: Testimonial[]
+  features: FeatureHighlight[]
 }
 
 const useStore = create<AppState>((set, get) => ({
@@ -42,6 +50,10 @@ const useStore = create<AppState>((set, get) => ({
     const invoice = { amount: total, items }
     import('../utils/invoiceSimulator').then(({ generateInvoice }) => generateInvoice(invoice))
   },
+  mockTranscripts,
+  mockFiles,
+  testimonials,
+  features,
 }))
 
 export default useStore
