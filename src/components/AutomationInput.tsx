@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useState } from 'react'
+import React from 'react'
+import useStore from '../lib/store'
 
 export default function AutomationInput() {
-  const [transcript, setTranscript] = useState('')
+  const { transcript, setTranscript } = useStore()
 
   return (
     <div className="mb-4">

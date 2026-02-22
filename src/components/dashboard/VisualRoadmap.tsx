@@ -5,8 +5,8 @@ export default function VisualRoadmap() {
   const { projects } = useStore()
 
   return (
-    <div className="bg-gray-800 p-4 rounded">
-      <h2 className="text-xl font-bold mb-2">Visual Roadmap</h2>
+    <div className="bg-slate-900 p-6 rounded-lg shadow-lg border border-slate-700 text-slate-100">
+      <h2 className="text-xl font-bold mb-4">Visual Roadmap</h2>
       {projects.map(p => (
         <div key={p.id} className="mb-2">
           <p>{p.name}</p>

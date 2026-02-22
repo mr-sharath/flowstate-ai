@@ -1,10 +1,13 @@
+"use client";
+
 import React from 'react'
 import useStore from '../lib/store'
 
 export default function AutomationButton() {
-  const { generateReport, generateInvoice } = useStore()
+  const { transcript, processTranscriptAsync, generateReport, generateInvoice } = useStore()
 
-  const handleClick = () => {
+  const handleClick = async () => {
+    await processTranscriptAsync(transcript)
     generateReport()
     generateInvoice()
   }
