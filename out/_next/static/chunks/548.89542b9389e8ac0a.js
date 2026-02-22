@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[548],{4548:function(e,t,n){n.r(t),n.d(t,{generatePDF:function(){return r}});var u=n(3375);function r(e){let t=new u.ZP;t.text(e,10,10),t.save("status-report.pdf")}}}]);
